@@ -1,0 +1,72 @@
+
+// COLORS
+$black : #040714;
+$withe: #f9f9f9;
+$silver : #c0c0c0;
+$purple : #6421ff;
+
+// RESET CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// GENREAL
+button{
+    cursor: pointer;
+}
+
+body{
+    background-color: $black;
+}
+
+
+// MIXINS
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $silver;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: $withe;
+}
+
+// COMPONENTS
+.text--link{
+    @include text(12px);
+    text-decoration: underline;
+    color: $withe;
+}
+
+.text--big{
+    @include text(18px);
+}
+
+.text--medium{
+    @include text;
+}
+
+.text--small{
+    @include text(12px);
+}
+
+.title--big{
+    @include title(44px);
+}
+
+.title--medium{
+    @include title;
+}
+
+.title--small{
+    @include title(28px);
+}

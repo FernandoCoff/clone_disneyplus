@@ -8,7 +8,7 @@ module.exports = function(grunt){
                 files: [{
                     expand: true,
                     cwd: 'assets/source/img/',
-                    src: ['**/*.{png, jpg, jpeg, gif}'],
+                    src: ['**/*.jpg' , '**/*.png', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.ico'],
                     dest: 'assets/build/img'
                 }]
             }
@@ -20,7 +20,7 @@ module.exports = function(grunt){
             },
             dist: {
                 files: {
-                    'assets/build/css/style.css': 'assets/source/scss/main.scss'
+                    'assets/build/css/main.min.css': 'assets/source/scss/main.scss'
                 }
             }
         },
@@ -50,7 +50,7 @@ module.exports = function(grunt){
                 livereload: true
             },
             imagemin: {
-                files: ['assets/source/img/**/*.{png, jpg, jpeg, gif}'],
+                files: ['assets/source/img/**/*'],
                 tasks: ['imagemin']
             },
             sass: {
