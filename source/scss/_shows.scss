@@ -1,0 +1,45 @@
+@use 'config';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+
+    &__list{
+        margin-top: 44px;
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        &--is-active{
+            display: grid;
+        }
+
+        &__item{
+            img{
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &__tabs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__button{
+            color: config.$withe;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            border-bottom: 5px solid transparent;
+
+            &--is-active{
+                border-bottom: 5px solid config.$withe;
+            }
+
+        }
+    }
+}

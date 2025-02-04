@@ -7,7 +7,7 @@ module.exports = function(grunt){
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: 'assets/source/img/',
+                    cwd: 'source/img/',
                     src: ['**/*.jpg' , '**/*.png', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.ico'],
                     dest: 'assets/build/img'
                 }]
@@ -20,7 +20,7 @@ module.exports = function(grunt){
             },
             dist: {
                 files: {
-                    'assets/build/css/main.min.css': 'assets/source/scss/main.scss'
+                    'build/css/main.min.css': 'source/scss/main.scss'
                 }
             }
         },
@@ -28,7 +28,7 @@ module.exports = function(grunt){
         uglify: {
             my_target: {
                 files: {
-                    'assets/build/js/main.min.js': ['assets/source/js/*.js']
+                    'build/js/main.min.js': ['source/js/*.js']
                 }
             }
         },
@@ -50,15 +50,15 @@ module.exports = function(grunt){
                 livereload: true
             },
             imagemin: {
-                files: ['assets/source/img/**/*'],
+                files: ['source/img/**/*'],
                 tasks: ['imagemin']
             },
             sass: {
-                files: ['assets/source/scss/**/*.scss'],
+                files: ['source/scss/**/*.scss'],
                 tasks: ['sass']
             },
             uglify: {
-                files: ['assets/source/js/*.js'],
+                files: ['source/js/*.js'],
                 tasks: ['uglify']
             },
             htmlmin: {
