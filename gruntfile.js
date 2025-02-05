@@ -9,7 +9,7 @@ module.exports = function(grunt){
                     expand: true,
                     cwd: 'source/img/',
                     src: ['**/*.jpg' , '**/*.png', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.ico'],
-                    dest: 'assets/build/img'
+                    dest: 'build/img'
                 }]
             }
         },

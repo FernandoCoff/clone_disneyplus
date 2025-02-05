@@ -38,7 +38,7 @@
                 height: 0;
                 overflow: hidden;
                 padding: 0 24px;
-                transition: height, .5s ease;                
+                transition: height, .5s ease;
             }
 
             &--is-open{
@@ -48,7 +48,7 @@
 
                 .faq__questions__item__answer{
                     height: auto;
-                    padding-top: 24px;
+                    padding-top: 0px;
                     padding-bottom: 24px;
                     transition: height, .5s ease;
                 }
@@ -56,4 +56,13 @@
         }
         }
 
+}
+
+.text--medium__list{
+    padding: 0px 24px;
+    list-style: disc;
+
+    li{
+        padding: 14px 0;
+    }
 }
