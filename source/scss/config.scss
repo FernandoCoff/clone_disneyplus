@@ -103,3 +103,42 @@ body{
     border: none;
     font-weight: 300;
 }
+
+.image-text-section{
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+    &__text-container{
+        padding: 0 2vw;
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    &--image-full-width{
+        display: block;
+        position: relative;
+
+        img{
+            width: 100%;
+
+        }
+
+        &__text-container{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            display: flex;
+            width: calc(50% - 5.6vw);
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
