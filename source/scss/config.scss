@@ -74,6 +74,7 @@ body{
 
 .text--small{
     @include text(12px);
+    text-decoration: none;
 }
 
 .title--big{
