@@ -61,7 +61,7 @@
                     background-color: #0063e5;
 
                     &:hover{
-                        background-color: lighten(#0063e5, 5%);
+                        background-color: color.adjust(#257ae9)
                     }
                 }
 
