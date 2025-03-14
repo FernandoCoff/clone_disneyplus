@@ -1,0 +1,81 @@
+@use 'config.scss';
+
+.header.--is-hidden{
+    .link__button.link__button--secondary,
+    .header__logo{
+        visibility: hidden;
+    }
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.header{
+    transition: 0.4s;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: config.$black;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 36px;
+    }
+
+    &__logo{
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        &__item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            .link__button{
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 45px;
+                font-size: 18px;
+                color: config.$withe;
+                background-color: config.$purple;
+                text-transform: uppercase;
+                border-radius: 4px;
+                text-decoration: none;
+                padding: 8px 14px;
+                letter-spacing: 1px;
+                border: 1px solid transparent;
+
+                &--secondary{
+                    background-color: #0063e5;
+
+                    &:hover{
+                        background-color: lighten(#0063e5, 5%);
+                    }
+                }
+
+                &--tertiary{
+                    background-color: rgba(0.0,0,.8);
+                    border-color: config.$withe;
+
+                    &:hover{
+                        background-color: config.$withe;
+                        color: config.$black;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,7 +1,20 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const buttons = document.querySelectorAll('[data-tab-button]')
     const question = document.querySelectorAll('[data-faq-question]')
-    
+
+    const hero = document.querySelector('.hero')
+    const heroHeigth = hero.clientHeight
+
+    window.addEventListener('scroll', ()=>{
+        const scrollY = window.scrollY
+        const header = document.querySelector('.header')
+
+        if(scrollY < heroHeigth){
+            header.classList = "header --is-hidden"
+        }else{
+            header.classList = "header"
+        }
+    })
 
     for(let i =0; i < buttons.length; i++){
         buttons[i].addEventListener('click', (button)=>{
